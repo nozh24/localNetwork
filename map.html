@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Создайте свою локальную карту</title>
+  <link rel="stylesheet" href="map.css">
+</head>
+<body>
+  <canvas id='jsCanvas' class="canvas"></canvas>
+  <div class="controls">
+    <div class="controls_btns">
+      <button id="">Сохранить карту</button>
+    </div>
+    <div class="controls_elements" id="">
+      <div class="controls_element"  draggable='true' >
+        <img  src="img/comp.png" alt="Комьютер" width="100px" height="100px">
+      </div>
+      <div class="controls_element" draggable='true'>
+        <img  src="img/notebook.png" alt="Ноутбук" width="90px" height="90px">
+      </div>
+      <div class="controls_element" draggable='true'>
+        <img  src="img/wifi-router.png" alt="Маршрутизатор" width="90px" height="90px">
+      </div>
+      <div class="controls_element" draggable='true'>
+        <img  src="img/switching.png" alt="Коммутатор" width="90px" height="90px">
+      </div>
+    </div>
+  </div>
+  <script>
+    let elems = document.querySelectorAll('.controls_element');
+    let parent = document.querySelector('#jsCanvas');
+    let current;
+
+    elems.forEach(function(elem){
+      elem.addEventListener('dragstart', function(event){
+        current = this;
+      });
+    });
+
+    parent.addEventListener('dragover', function(event){
+        event.preventDefault();   
+    });
+
+    parent.addEventListener('drop', function(event){
+        this.appendChild(current);
+    });
+  </script>
+<!--   <script>
+    const canvas = document.querySelector('#jsCanvas');
+    let elem = document.querySelector('#elem');
+
+    elem.addEventListener('dragstart', function(){
+      this.style.borderColor='red';
+      console.log('!');
+    });
+    canvas.addEventListener('dragover', function(event){
+      event.preventDefault();
+    });
+    canvas.addEventListener('drop', function(event){
+      this.appendChild(elem);
+    });
+    
+  </script> -->
+  <!--<script>
+    let mouse = {x:0,y:0,down:false};
+
+    let canvas = document.getElementById('jsCanvas');
+    let ctx = canvas.getContext('2d');
+    let width = 700, height = 550;
+
+    canvas.width = width;
+    canvas.height = height;
+    canvas.style.background = height;
+
+    window.onmousemove = function (e){
+      mouse x = e.pageX;
+      mouse y = e.pageY;
+    }
+
+    window.onmousedown = function (){
+      mouse.down = true;
+    }
+
+    window.onmouseup = function (){
+      mouse.down = false;
+    }
+
+  </script>-->
+</body>
+</html>
