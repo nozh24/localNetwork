@@ -1,7 +1,6 @@
-
 body {
   font-family: sans-serif;
-  background: url(img/image.jpg) no-repeat center center;
+  background: url(../img/image.jpg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
 
@@ -12,11 +11,10 @@ body {
 }
 .canvas {
   width: 700px;
-  height: 550px;
+  height: 650px;
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.2), 0 1px 3px rgba(0, 0, 0, 0.08);
-
 }
 .controls {
   margin-top: 50px;
@@ -43,19 +41,34 @@ body {
   font-size: 12px;
   text-transform: uppercase;
 }
-.controls_btns button:active{
+.controls_btns button:active {
   transform: scale(0.98);
 }
 .controls .controls_elements {
   display: flex;
 }
- .controls_elements .controls_element {
+.controls_elements .controls_element {
   cursor: pointer;
 }
-.controls_element{
+.controls_element {
   margin-right: 30px;
 }
-#elem{
-
-
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s;
+}
+a:hover {
+  font-size: 23px;
+  color: #6c5ce7;
+}
+.hello {
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s ease-out;
+}
+.hello:hover {
+  color: #6c5ce7;
+  cursor: pointer;
 }
