@@ -25,6 +25,7 @@ include_once ("includes/connect.php");
     <!-- <div class="controls_btns">
       <button id="save">Сохранить карту</button>
     </div> -->
+    <!-- ///-->
     <p class="hello">Чтобы сохранить карту, необходимо кликнуть правой кнопкой мыши по карте и выбрать пункт "Сохранить картинку как..."</p>
 </body>
 </html>
